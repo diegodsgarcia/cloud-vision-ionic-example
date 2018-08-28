@@ -1,0 +1,7 @@
+{
+  "name": "cloud-vision-ionic-example",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
