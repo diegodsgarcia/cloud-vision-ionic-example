@@ -1,14 +1,23 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Exemplo do Google Cloud Vision
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button full (click)="tirarFoto()">Tirar foto</button>
+
+  <ion-card *ngIf="imagem">
+    <img [src]="imagem">
+    
+    <ion-card-content>
+        <p *ngFor="let resultado of resultados">
+          {{ resultado.description }} - Há {{ verificarPrecisao(resultado.score) }}% de precisão.
+        </p>
+        <p></p>
+    </ion-card-content>
+  </ion-card>
+  
 </ion-content>
