@@ -50,6 +50,9 @@ export class HomePage {
       this.loading.dismiss();
       this.change.detectChanges();
     })
+    .catch(() => {
+      this.loading.dismiss();
+    })
 
   }
 
@@ -65,7 +68,7 @@ export class HomePage {
           "features":[
             {
               "type":"LABEL_DETECTION",
-              "maxResults": 1
+              "maxResults": 5
             }
           ]
         }
